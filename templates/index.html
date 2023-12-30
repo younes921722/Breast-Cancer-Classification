@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predictor Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            /* display: flex;
+            align-items: center; */
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        span {
+            color: #007bff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post" id="form1">
+        <label for="inputed_data">Inputed Data:</label>
+        <input type="text" id="inputed_data" name="inputed_data" required><br>
+        <label for="result">Class:</label>
+        <span>{{result}}</span>
+        <br><br><br>
+        <!-- Submit Button -->
+        <div style="text-align: center;">
+            <input type="submit" value="Predict">
+        </div>
+        <!-- <input type="submit" value="Predict"> -->
+    </form>
+</body>
+<br>
+<!-- <body>
+    <form method="post" enctype="multipart/form-data"><br>
+        <label for="inputed_data">Image Upload</label><br>
+        <input type="file" name="file" accept="image/*"><br>
+        <div style="text-align: center;">
+            <input style="text-align: center;" type="submit" value="Upload">
+        </div>
+    </form>
+  </body> -->
+</html>
